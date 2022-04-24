@@ -1,5 +1,5 @@
 ![header](imgs/header.png)
-# STARFALL
+# STARFALL🌠
 [**Getting Started**](#gettingstarted) | [**Results**](#results)
 
 STARFALL is a natural language inference system on [Discrete Reasoning Over the content of Paragraphs](https://allenai.org/data/drop) (DROP) dataset.
