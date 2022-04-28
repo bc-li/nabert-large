@@ -2,6 +2,8 @@
 # STARFALL
 [**Getting Started**](#getting-started) | [**Results**](#results)
 
+
+
 STARFALL is a natural language inference system on [Discrete Reasoning Over the content of Paragraphs](https://allenai.org/data/drop) (DROP) dataset.
 
 It is also a project for MSRA-USTC Joint PhD Innovation Project 2022.
