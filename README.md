@@ -49,14 +49,13 @@ allennlp train /STARFALL/src/starfall/config/starfall.jsonnet -s /STARFALL/src/s
 
 ### NAQANet Baseline:
 
-| Train Batch EM | ![train_batch_em (1)](/imgs/train_batch_em (1).svg) |
-| -------------- | --------------------------------------------------- |
-| Train Batch F1 | ![train_batch_f1](/imgs/train_batch_f1.svg)         |
-| Train EM       | ![train_em](/imgs/train_em.svg)                     |
-| Train F1       | ![train_f1](/imgs/train_f1.svg)                     |
-| Train Loss     | ![train_loss](/imgs/train_loss.svg)                 |
-| Validation EM  | ![validation_em](/imgs/validation_em.svg)           |
-| Validation F1  | ![validation_f1](/imgs/validation_f1.svg)           |
+| Train Batch EM                                      | Train Batch F1                              | Train EM                        | Train F1                        |
+| --------------------------------------------------- | ------------------------------------------- | ------------------------------- | ------------------------------- |
+| ![train_batch_em (1)](/imgs/train_batch_em.svg) | ![train_batch_f1](/imgs/train_batch_f1.svg) | ![train_em](/imgs/train_em.svg) | ![train_f1](/imgs/train_f1.svg) |
+
+| Train Loss                          | Validation EM                             | Validation F1                             |
+| ----------------------------------- | ----------------------------------------- | ----------------------------------------- |
+| ![train_loss](/imgs/train_loss.svg) | ![validation_em](/imgs/validation_em.svg) | ![validation_f1](/imgs/validation_f1.svg) |
 
 
 
