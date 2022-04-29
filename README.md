@@ -47,3 +47,4 @@ allennlp train /STARFALL/src/starfall/config/starfall.jsonnet -s /STARFALL/src/s
 
 ### NAQANet Baseline:
 
+<img src="/imgs/train_batch_f1.svg" alt="train_batch_f1" style="zoom:33%;" />
