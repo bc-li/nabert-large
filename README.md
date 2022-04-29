@@ -49,4 +49,14 @@ allennlp train /STARFALL/src/starfall/config/starfall.jsonnet -s /STARFALL/src/s
 
 ### NAQANet Baseline:
 
-<img src="/imgs/train_batch_f1.svg" alt="train_batch_f1" style="zoom:33%;" />
+| Train Batch EM | ![train_batch_em (1)](\imgs\train_batch_em (1).svg) |
+| -------------- | --------------------------------------------------- |
+| Train Batch F1 | ![train_batch_f1](\imgs\train_batch_f1.svg)         |
+| Train EM       | ![train_em](\imgs\train_em.svg)                     |
+| Train F1       | ![train_f1](\imgs\train_f1.svg)                     |
+| Train Loss     | ![train_loss](\imgs\train_loss.svg)                 |
+| Validation EM  | ![validation_em](\imgs\validation_em.svg)           |
+| Validation F1  | ![validation_f1](\imgs\validation_f1.svg)           |
+
+
+
