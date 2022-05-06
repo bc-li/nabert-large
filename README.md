@@ -68,5 +68,5 @@ allennlp train /STARFALL/src/starfall/config/starfall.jsonnet -s /STARFALL/src/s
 
 | Train Batch EM                                               | Train Batch F1                                               | Validation/Train EM                                                | Validation/Train F1                                                |
 | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| ![epoch_metrics_em](/imgs/nabert+\epoch_metrics_em.svg) | ![epoch_metrics_f1](/imgs/nabert+\epoch_metrics_f1.svg) | ![em](/imgs/nabert+\em.svg) | ![f1](/imgs/nabert+\f1.svg) |
+| ![epoch_metrics_em](/imgs/nabert+/epoch_metrics_em.svg) | ![epoch_metrics_f1](/imgs/nabert+/epoch_metrics_f1.svg) | ![em](/imgs/nabert+/em.svg) | ![f1](/imgs/nabert+/f1.svg) |
 
