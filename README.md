@@ -51,11 +51,22 @@ allennlp train /STARFALL/src/starfall/config/starfall.jsonnet -s /STARFALL/src/s
 
 | Train Batch EM                                      | Train Batch F1                              | Train EM                        | Train F1                        |
 | --------------------------------------------------- | ------------------------------------------- | ------------------------------- | ------------------------------- |
-| ![train_batch_em (1)](/imgs/train_batch_em.svg) | ![train_batch_f1](/imgs/train_batch_f1.svg) | ![train_em](/imgs/train_em.svg) | ![train_f1](/imgs/train_f1.svg) |
+| ![train_batch_em (1)](/imgs/naqanet/train_batch_em.svg) | ![train_batch_f1](/imgs/naqanet/train_batch_f1.svg) | ![train_em](/imgs/naqanet/train_em.svg) | ![train_f1](/imgs/naqanet/train_f1.svg) |
 
 | Train Loss                          | Validation EM                             | Validation F1                             |
 | ----------------------------------- | ----------------------------------------- | ----------------------------------------- |
-| ![train_loss](/imgs/train_loss.svg) | ![validation_em](/imgs/validation_em.svg) | ![validation_f1](/imgs/validation_f1.svg) |
+| ![train_loss](/imgs/naqanet/train_loss.svg) | ![validation_em](/imgs/naqanet/validation_em.svg) | ![validation_f1](/imgs/naqanet/validation_f1.svg) |
+
+### NABERT:
+
+| Train Batch EM                                         | Train Batch F1                                         | Validation/Train EM              | Validation/Train F1              |
+| ------------------------------------------------------ | ------------------------------------------------------ | -------------------------- | -------------------------- |
+| ![epoch_metrics_em](/imgs/nabert/epoch_metrics_em.svg) | ![epoch_metrics_f1](/imgs/nabert/epoch_metrics_f1.svg) | ![em](/imgs/nabert/em.svg) | ![f1](/imgs/nabert/f1.svg) |
 
 
+### NABERT+
+
+| Train Batch EM                                               | Train Batch F1                                               | Validation/Train EM                                                | Validation/Train F1                                                |
+| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| ![epoch_metrics_em](/imgs/nabert+\epoch_metrics_em.svg) | ![epoch_metrics_f1](/imgs/nabert+\epoch_metrics_f1.svg) | ![em](/imgs/nabert+\em.svg) | ![f1](/imgs/nabert+\f1.svg) |
 
