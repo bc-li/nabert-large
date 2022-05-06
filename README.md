@@ -1,10 +1,20 @@
-![header](imgs/header.png)
-# STARFALL
+# NABERT-Large+
 [**Getting Started**](#getting-started) | [**Results**](#results)
 
 
 
-STARFALL is a natural language inference system on [Discrete Reasoning Over the content of Paragraphs](https://allenai.org/data/drop) (DROP) dataset.
+This repository provides:
+* Reproduction guides and results(training curves) of:
+    * NAQANET
+    * NABERT+
+    * NAQANet
+* We also retrained NABERT+ with BERT-Large, which gained an 10% improvement on dev datasets of [Discrete Reasoning Over the content of Paragraphs](https://allenai.org/data/drop) (DROP).
+* A detailed report
+* Also some failed attempts of migrating BERT encoders to RoBERTa and AlBERT (due to time limit).
+
+The codes and training configs are based on [@raylin1000](https://github.com/raylin1000) and AI2.
+
+
 
 It is also a project for MSRA-USTC Joint PhD Innovation Project 2022.
 
@@ -19,8 +29,8 @@ Install dependencies
 
 ```bash
 # clone project
-git clone https://github.com/BC-Li/STARFALL
-cd STARFALL
+git clone https://github.com/BC-Li/nabert-large
+cd nabert-large
 
 # [OPTIONAL] create conda environment
 conda create -n myenv python=3.7
@@ -36,13 +46,19 @@ pip install -r requirements.txt
 Running NAQANet Baseline:
 
 ```bash
-allennlp train /STARFALL/src/baseline/config/naqanet.jsonnet -s /STARFALL/src/baseline/storage --include-package baseline
+allennlp train /nabert-large/src/baseline/config/naqanet.jsonnet -s /nabert-large/src/baseline/storage --include-package baseline
 ```
 
 Train starfall with config from [src/starfall/config](configs/experiment/)
 
 ```bash
-allennlp train /STARFALL/src/starfall/config/starfall.jsonnet -s /STARFALL/src/starfall/storage --include-package STARFALL
+allennlp train /nabert-large/src/nabert-large/config/starfall.jsonnet -s /nabert-large/src/nabert-large/storage --include-package nabert-large
+```
+
+TensorBoard:
+
+```bash
+tensorboard --logdir="/nabert-large/src/nabert-large/storage"
 ```
 
 ## Results
