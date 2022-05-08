@@ -1,27 +1,20 @@
 # NABERT-Large+
 [**Getting Started**](#getting-started) | [**Results**](#results)
 
-
-
 This repository provides:
-* Reproduction guides and results(training curves) of:
-    * NAQANET
-    * NABERT+
+* Reproduction guides and Training results of:
     * NAQANet
+    * NABERT
+    * NABERT+
+
 * We also retrained NABERT+ with BERT-Large, which gained an 10% improvement on dev datasets of [Discrete Reasoning Over the content of Paragraphs](https://allenai.org/data/drop) (DROP).
 * A detailed report
 * Also some failed attempts of migrating BERT encoders to RoBERTa and AlBERT (due to time limit).
 
-The codes and training configs are based on [@raylin1000](https://github.com/raylin1000) and AI2.
-
-
-
-It is also a project for MSRA-USTC Joint PhD Innovation Project 2022.
+The codes and training configs are based on [@raylin1000](https://github.com/raylin1000)(NABERT Model) and [AI2](https://github.com/allenai/allennlp-models/blob/main/allennlp_models/rc/models/naqanet.py).
 
 <a href="https://pytorch.org/get-started/locally/"><img alt="PyTorch" src="https://img.shields.io/badge/PyTorch-ee4c2c?logo=pytorch&logoColor=white"></a>
 <a href="https://github.com/allenai/allennlp"><img alt="Config: AllenNLP" src="https://img.shields.io/badge/Config-AllenNLP-89b8cd"></a>
-
-
 
 ## Getting Started
 
@@ -43,25 +36,43 @@ conda activate myenv
 pip install -r requirements.txt
 ```
 
-Running NAQANet Baseline:
+Running NAQANet Baseline. This will require a GRAM for ~8GB and about 20 hours on RTX3090 to make the model reach convergence.
 
 ```bash
 allennlp train /nabert-large/src/baseline/config/naqanet.jsonnet -s /nabert-large/src/baseline/storage --include-package baseline
 ```
 
-Train starfall with config from [src/starfall/config](configs/experiment/)
+Running NABERT or NABERT+ Baseline.
 
 ```bash
-allennlp train /nabert-large/src/nabert-large/config/starfall.jsonnet -s /nabert-large/src/nabert-large/storage --include-package nabert-large
+allennlp train /nabert/src/nabert/config/nabert.json -s /nabert/src/nabert/storage --include-package nabert
 ```
 
-TensorBoard:
+Train NABERT-Large+ with config from [src/nabert-large/config](configs/experiment/). Please ensure you have a GPU which have ~22GB GRAM. I trained it on a single RTX3090 for about 20 hours with early stopping to avoid overfitting.
+
+```bash
+allennlp train /nabert/src/nabert/config/nabert-large.json -s /nabert-large/src/nabert-large/storage --include-package nabert-large
+```
+
+AllenNLP supports TensorBoard. To open it, just change the `--logdir` parameter to run following command
 
 ```bash
 tensorboard --logdir="/nabert-large/src/nabert-large/storage"
 ```
 
 ## Results
+
+| Model                                      | EM        | F1        |
+| ------------------------------------------ | --------- | --------- |
+| NAQANet                                    | 46.20     | 49.24     |
+| NABERT                                     | 54.67     | 57.64     |
+| NABERT+                                    | 62.67     | 66.29     |
+| NumNet                                     | 64.92     | 68.31     |
+| NABERT-Large+                              | **67.23** | **70.96** |
+| OPERA (Current Rank 1 on DROP Leaderboard) | 86.79     | 89.41     |
+| Human                                      | 94.90     | 96.42     |
+
+## Training Result
 
 ### NAQANet Baseline:
 
