@@ -10,7 +10,7 @@ This repository provides:
     * NAQANet
     * NABERT
     * NABERT+
-* We also retrained NABERT+ with BERT-Large, which gained an 10% improvement on dev datasets of [Discrete Reasoning Over the content of Paragraphs](https://allenai.org/data/drop) (DROP).
+* We also retrained NABERT+ with BERT-Large, which gained **8.2% EM** and **7.4% F1** improvement on dev datasets of [Discrete Reasoning Over the content of Paragraphs](https://allenai.org/data/drop) (DROP).
 * A detailed report
 
 The codes and training configs are based on [@raylin1000](https://github.com/raylin1000)(NABERT Model) and [AI2](https://github.com/allenai/allennlp-models/blob/main/allennlp_models/rc/models/naqanet.py).
@@ -78,13 +78,19 @@ tensorboard --logdir="/nabert-large/src/nabert-large/storage"
 | NABERT                                     | 54.67     | 57.64     |
 | NABERT+                                    | 62.67     | 66.29     |
 | NumNet                                     | 64.92     | 68.31     |
-| NABERT-Large+                              | **67.23** | **70.96** |
+| NABERT-Large+ (dropout=0.11)               | **67.82** | **71.25** |
 | OPERA (Current Rank 1 on DROP Leaderboard) | 86.79     | 89.41     |
 | Human                                      | 94.90     | 96.42     |
 
 ## Training Result
 
-### NAQANet Baseline:
+### NABERT-Large+
+| Train Batch EM                                               | Train Batch F1                                               | Validation/Train EM                                                | Validation/Train F1                                                |
+| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| ![epoch_metrics_em](/imgs/nabert-large/epoch_metrics_em.svg) | ![epoch_metrics_f1](/imgs/nabert-large/epoch_metrics_f1.svg) | ![em](/imgs/nabert-large/em.svg) | ![f1](/imgs/nabert-large/f1.svg) |
+
+
+### NAQANet Baseline
 
 | Train Batch EM                                      | Train Batch F1                              | Train EM                        | Train F1                        |
 | --------------------------------------------------- | ------------------------------------------- | ------------------------------- | ------------------------------- |
@@ -94,7 +100,7 @@ tensorboard --logdir="/nabert-large/src/nabert-large/storage"
 | ----------------------------------- | ----------------------------------------- | ----------------------------------------- |
 | ![train_loss](/imgs/naqanet/train_loss.svg) | ![validation_em](/imgs/naqanet/validation_em.svg) | ![validation_f1](/imgs/naqanet/validation_f1.svg) |
 
-### NABERT:
+### NABERT
 
 | Train Batch EM                                         | Train Batch F1                                         | Validation/Train EM              | Validation/Train F1              |
 | ------------------------------------------------------ | ------------------------------------------------------ | -------------------------- | -------------------------- |
