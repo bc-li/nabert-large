@@ -72,7 +72,7 @@ tensorboard --logdir="/nabert-large/src/nabert-large/storage"
 
 ## Results
 
-| Model                                      | EM        | F1        |
+| Model/Human                        | EM        | F1        |
 | ------------------------------------------ | --------- | --------- |
 | NAQANet                                    | 46.20     | 49.24     |
 | NABERT                                     | 54.67     | 57.64     |
